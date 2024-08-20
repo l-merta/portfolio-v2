@@ -1,0 +1,40 @@
+:root {
+  --f-1: "Comfortaa";
+  --f-2: "DM Mono";
+  --f-3: "Jersey 10";
+  --f-4: "Montserrat";
+  --f-5: "Playwrite NG Modern";
+  --f-6: "Poppins";
+  --f-7: "Roboto Mono";
+  --f-8: "Roboto Slab";
+  --f-9: "Rubik Mono One";
+  --f-10: "Rubik Moonrocks";
+  --f-11: "Silkscreen";
+  --f-12: "Space Grotesk";
+  --f-13: "Tiny5";
+  --f-14: "Viga";
+  --f-15: "Hammersmith One";
+  --f-16: "Heebo";
+  --f-17: "Jacquard 12";
+  --f-18: "Ubuntu";
+  --f1: var(--f-1);
+  --f2: var(--f-2);
+  --f3: var(--f-3);
+  --f4: var(--f-4);
+  --f5: var(--f-17);
+  --f6: var(--f-18);
+  --c1: black;
+  --c2: white;
+  --c3: rgb(201, 201, 201);
+  --hh: 5em;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  margin-bottom: 500px;
+}
+
+body * {
+  box-sizing: border-box;
+}/*# sourceMappingURL=index.css.map */
