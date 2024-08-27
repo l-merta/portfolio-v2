@@ -29,6 +29,10 @@
   --hh: 5em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
   margin: 0;

@@ -1,0 +1,88 @@
+{
+  "tech": {
+    "languages": [
+      {
+        "name": "HTML",
+        "date": "leden 2023",
+        "icon": "html.png"
+      },
+      {
+        "name": "CSS",
+        "date": "leden 2023",
+        "icon": "css.png"
+      },
+      {
+        "name": "SCSS",
+        "date": "červenec 2024",
+        "icon": "sass.png"
+      },
+      {
+        "name": "JavaScript",
+        "date": "leden 2023",
+        "icon": "js.png"
+      },
+      {
+        "name": "TypeScript",
+        "date": "srpen 2024",
+        "icon": "ts.png"
+      },
+      {
+        "name": "React",
+        "date": "srpen 2024",
+        "icon": "react.png"
+      },
+      {
+        "name": "PHP",
+        "date": "březen 2023",
+        "icon": "php.png"
+      },
+      {
+        "name": "C#",
+        "date": "březen 2020",
+        "icon": "csh.png"
+      },
+      {
+        "name": "MySQL",
+        "date": "březen 2023",
+        "icon": "mysql.png"
+      },
+      {
+        "name": "Docker",
+        "date": "srpen 2024",
+        "icon": "docker.png"
+      }
+    ],
+    "software": [
+      {
+        "name": "Github",
+        "date": "červen 2024",
+        "icon": "github.png"
+      },
+      {
+        "name": "Figma",
+        "date": "červen 2024",
+        "icon": "figma.png"
+      },
+      {
+        "name": "Blender",
+        "date": "srpen 2022",
+        "icon": "blender.png"
+      },
+      {
+        "name": "Photoshop",
+        "date": "září 2023",
+        "icon": "photoshop.png"
+      },
+      {
+        "name": "Unity",
+        "date": "březen 2020",
+        "icon": "unity.png"
+      },
+      {
+        "name": "Firebase",
+        "date": "červen 2023",
+        "icon": "firebase.png"
+      }
+    ]
+  }
+}

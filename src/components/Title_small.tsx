@@ -6,13 +6,13 @@ interface TitleProps {
   bg?: boolean;
 }
 
-const Title = ({ children, abs, bg }: TitleProps) => {
+const Title_small = ({ children, abs, bg }: TitleProps) => {
   if (abs == undefined) abs = false;
   if (bg == undefined) bg = false;
 
   return (
-    <h2 className={"title " + (abs ? "title-abs " : " ") + (bg ? "title-bg " : " ")}>{children}</h2>
+    <h2 className={"title-small " + (abs ? "title-small-abs " : " ") + (bg ? "title-small-bg " : " ")}>{children}</h2>
   )
 }
 
-export default Title
+export default Title_small

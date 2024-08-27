@@ -28,6 +28,9 @@
   --c3: rgb(201, 201, 201);
   --hh: 5em;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: white;
   margin: 0;

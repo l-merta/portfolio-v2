@@ -1,5 +1,6 @@
 #particles-js
 {
+  color: white;
   opacity: 1.0;
   width: 100%;
   height: 85vh;
@@ -7,20 +8,40 @@
   top: 0;
   z-index: 1;
 }
-.title {
+.anchor {
+  position: relative;
+  top: -5em;
+}
+.title,
+.title-small {
   mix-blend-mode: difference;
   background: -webkit-linear-gradient(-90deg, rgb(255, 255, 255) 50%, rgba(5, 5, 5, 0.2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font: 600 3.0em var(--f6);
+  width: 100%;
   margin: 1.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35em;
   text-align: center;
   pointer-events: none;
+  z-index: 9;
 }
-.title-abs {
+.title-small {
+  width: 100%;
+  font-size: 2.0em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  justify-content: start;
+}
+.title-abs,
+.title-small-abs {
   position: absolute;
 }
-.title-bg {
+.title-bg,
+.title-small-bg {
 }
 header {
   //background-color: rgba(255, 255, 255, 0.5);
@@ -104,6 +125,7 @@ header {
   }
 }
 main {
+  background-color: white;
   font-size: 1em;
   width: 100%;
   height: 85vh;
@@ -135,8 +157,178 @@ main {
     opacity: 0.9;
     width: fit-content;
     scale: 0.9;
+    z-index: 1;
+  }
+  a {
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    width: 20em;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: visible;
+    cursor: pointer;
+    z-index: 2;
+
+    .bg {
+      background-color: rgba(204, 204, 204, 0.05);
+      aspect-ratio: 1/1;
+      width: 0%;
+      border-radius: 50%;
+      backdrop-filter: blur(5px);
+      transition: all .3s;
+    }
+    i {
+      color: transparent;
+      scale: 10;
+      position: absolute;
+      transition: all .3s;
+    }
+  }
+  a:hover {
+    .bg {
+      width: 100%;
+      scale: 1.1;
+    }
+    i {
+      color: black;
+      scale: 10;
+    }
+  }
+}
+.tech {
+  background-color: rgb(254, 254, 254);
+  opacity: 1;
+  width: 100%;
+  //height: 1034px;
+  padding: 2em 5vw;
+  padding-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  transition: all .8s;
+
+  .dotPatern-parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0;
+
+    .dotPatern {
+      width: 100em;
+      height: 100em;
+    }
+    .vignete {
+      background: rgb(254,254,254);
+      background: radial-gradient(circle, rgba(254,254,254,0.55) 0%, rgba(254,254,254,1) 80%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .tech-list {
+    width: 100%;
+    max-width: 70em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em 1em;
+
+    .tech-item {
+      min-width: 20em;
+      //width: fill;
+      //max-width: 44.0vw;
+      //height: 10em;
+      //border: 1px solid whitesmoke;
+      //border-radius: 0.5em;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 1.2em;
+      z-index: 1;
+
+      img {
+        aspect-ratio: 1/1;
+        width: 6em;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+
+        .name {
+          font: 500 2.0em var(--f6);
+        }
+        .time {
+          font: 300 0.8em var(--f6);
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+
+          span {
+            font: 400 1.4em var(--f6);
+          }
+        }
+      }
+    }
+  }
+}
+.tech-hidden {
+  opacity: 0;
+  height: 0 !important;
+  overflow-y: hidden;
+
+  .tech-list {
+    .tech-item {
+      display: none;
+    }
   }
 }
 .skola {
   width: 100%;
+  min-height: 50em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .sin_parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    transform: rotate(-40deg);
+  }
+}
+.velocityScroll-cont {
+  overflow: hidden;
+
+  .velocityScroll {
+    opacity: 0.6;
+    font: 800 1.6em var(--f4);
+    margin: 0.5em 0;
+    word-spacing: 0.0em;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+  }
 }
