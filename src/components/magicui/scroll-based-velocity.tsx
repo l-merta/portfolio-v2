@@ -37,8 +37,7 @@ export function VelocityScroll({
 }: VelocityScrollProps) {
   function ParallaxText({
     children,
-    baseVelocity = 100,
-    className,
+    baseVelocity = 50,
   }: ParallaxProps) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
@@ -76,6 +75,7 @@ export function VelocityScroll({
 
     const directionFactor = React.useRef<number>(1);
     useAnimationFrame((t, delta) => {
+      t = t;
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {

@@ -26,6 +26,10 @@
   --c1: black;
   --c2: white;
   --c3: rgb(201, 201, 201);
+
+  --v-c1: rgb(70, 133, 250);
+  --v-c2: rgb(27,88,203);
+  
   --hh: 5em;
 }
 html {
@@ -38,4 +42,12 @@ body {
 }
 body * {
   box-sizing: border-box;
+}
+.disabled {
+  display: none !important;
+}
+.sticker {
+  width: 120px;
+  position: absolute;
+  z-index: -1;
 }
