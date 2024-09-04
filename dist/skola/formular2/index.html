@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Školní bufet</h2>
+    <form action="">
+        <h3>Co si dáte?*</h3>
+        <select name="typ" id="" size="4">
+            <option value="">Párek v rohlíku</option>
+            <option value="">Bageta</option>
+            <option value="">Stripsy</option>
+            <option value="">Nugetky</option>
+            <option value="">Toust</option>
+            <option value="">Brambůrky</option>
+            <option value="">Bonbónky</option>
+        </select>
+        <h3>Omáčka</h3>
+        <select name="oma" id="" size="1">
+            <option value="">Kečup</option>
+            <option value="">Hořčice</option>
+            <option value="">Samuraj</option>
+            <option value="">Cibulová</option>
+            <option value="">Francouzská</option>
+            <option value="">Barbeque</option>
+        </select>
+        <h3>Číslo stolu*</h3>
+        <input type="number" style="width: 50px;">
+        <h3>Barva ubrusu</h3>
+        <input type="color">
+        <h3>Plánované vyzvednutí objednávky</h3>
+        <input type="date"> <br>
+        <input type="time">
+        <h3>Poznámka pro obsluhu</h3>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+        <h3>Způsob platby</h3>
+        <input type="radio" name="ra" id="" checked> Hotovostí <br>
+        <input type="radio" name="ra" id=""> Kartou <br>
+        <h3>Registrace do klubu bufetníků</h3>
+        <div class="registraceCont">
+            <input type="text" placeholder="Uživatelské jméno">
+            <input type="password" placeholder="Heslo">
+        </div>
+        <input type="checkbox" name="" id="" checked> Zasílejte mi novinky e-mailem <br><br>
+        <input type="submit" value="Odeslat objednávku">
+        <input type="reset" value="Smazat">
+    </form>
+    <form action="help.html">
+        <br>
+        <input type="submit" value="Help">
+    </form>
+</body>
+</html>

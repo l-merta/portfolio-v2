@@ -1,0 +1,33 @@
+/* definice animace */
+@keyframes animace1 {
+        0%   {width: 50px; height: 50px;}
+        30%  {width: 100px; height: 50px;}
+        70%  {width: 100px; height: 100px;}
+        100% {width: 50px; height: 50px;}
+}
+@keyframes animace2 {
+        0%   {transform: rotate(0deg);}
+        100%  {transform: rotate(360deg);}
+}
+@keyframes animace3 {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+}
+
+.ukazka4 .anim1 {
+        animation-name: animace1; /*jméno animace*/
+        animation-duration: 4s; /*délka animace*/
+        animation-iteration-count: infinite; /*počet opakování*/
+}
+.ukazka4 .anim2 {
+        animation-name: animace2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+}
+.ukazka4 .anim3 {
+        animation-name: animace3;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+}

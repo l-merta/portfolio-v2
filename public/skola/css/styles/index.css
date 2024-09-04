@@ -1,0 +1,339 @@
+:root
+{
+  --f1: "Exo 2";
+  --f2: "Anton";
+  --f3: "Dosis";
+  --f4: "Gwendolyn";
+  --f5: "Heebo";
+  --f6: "Josefin Sans";
+  --f7: "Kanit";
+  --f8: "Poppins";
+  --f9: "Roboto Slab";
+  --f10: "Source Code Pro";
+  --f11: "Tiny5";
+  --nw-s: 6em;
+  --nw-l: 16em;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+body
+{
+  margin: 0;
+  margin-bottom: 100px;
+  overflow-x: hidden;
+}
+body *
+{
+  box-sizing: border-box;
+}
+.disabled
+{
+  display: none !important;
+}
+.anchor
+{
+  position: relative;
+  top: -2em;
+}
+
+nav
+{
+  background-color: rgb(254, 254, 254);
+  width: var(--nw-s);
+  height: 100vh;
+  border-right: 2px solid rgb(236, 236, 236);
+  position: absolute;
+  top: 75vh;
+  left: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  transition: width .12s;
+}
+.nav-sticky
+{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+nav:hover
+{
+  width: var(--nw-l);
+}
+nav button
+{
+  color: black;
+  font: 500 1.0em var(--f1);
+  background-color: transparent;
+  width: var(--nw-l);
+  /* height: 3em !important; */
+  border: none;
+  border-bottom: 2px solid rgb(236, 236, 236);
+  padding: 1em 0;
+  padding-left: 1em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .12s;
+}
+nav button:hover
+{
+  color: white;
+  background-color: rgb(20, 149, 255);
+}
+nav button:hover div
+{
+  color: black;
+  background-color: white;
+}
+nav button span
+{
+  font: 600 1.5em var(--f1);
+}
+nav button div
+{
+  background-color: rgb(243, 243, 243);
+  aspect-ratio: 1/1;
+  width: 4em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button div i
+{
+  scale: 2.2;
+}
+.uvod
+{
+  width: 100%;
+  height: 75vh;
+  padding-bottom: 0vh;
+  margin-bottom: -3em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+.uvod .bg
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 0.1em; */
+  overflow: hidden;
+  z-index: 0;
+}
+.uvod .bg .line
+{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  width: 100%;
+  height: 5em;
+  position: absolute;
+  bottom: 0;
+}
+.uvod .bg .sloup
+{
+  width: 100%;
+  height: 100%;
+  transition: all .2s;
+  z-index: -1;
+}
+.uvod .bg .sloup1
+{
+  background-color: rgba(0, 53, 88, 0.8);
+  /* background: rgb(20,109,175);
+  background: linear-gradient(0deg, rgba(20,109,175,1) 0%, rgba(33,191,198,1) 72%); */
+}
+.uvod .bg .sloup2
+{
+  background-color: rgba(0, 53, 88, 0.85);
+}
+.uvod .bg .sloup3
+{
+  background-color: rgba(0, 53, 88, 0.9);
+}
+.uvod .bg .sloup4
+{
+  background-color: rgba(0, 53, 88, 0.95);
+}
+.uvod .bg .sloup5
+{
+  background-color: rgba(0, 53, 88, 1.0);
+}
+.uvod .bg .sloup:hover
+{
+  opacity: 0.98;
+}
+.uvod h1
+{
+  color: white;
+  font: 800 5em var(--f1);
+  pointer-events: none;
+  z-index: 1;
+}
+.uvod p
+{
+  color: white;
+  font: 500 1.2em var(--f1);
+  width: 30vw;
+  pointer-events: none;
+  z-index: 1;
+}
+.uvod button
+{
+  color: black;
+  background-color: white;
+  font: 700 1.4em var(--f1);
+  border: none;
+  border-radius: 5em;
+  padding: 0.5em 1.0em;
+  position: absolute;
+  bottom: 5em;
+  transition: all .12s;
+  cursor: pointer;
+}
+.uvod button:hover
+{
+  opacity: 0.9;
+}
+
+.css
+{
+  font: 500 1.3em var(--f1);
+  width: 100vw;
+  padding: 0 10vw;
+  margin-top: 5em;
+  position: relative;
+  left: 2.2em;
+}
+.css h2
+{
+  font: 300 1.8em var(--f1);
+  text-align: center;
+}
+.css .cont
+{
+  background-color: whitesmoke;
+  width: 100%;
+  height: 90vh;
+  border-radius: 2em;
+  margin-top: 3em;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.css .cont .exampleCont,
+.css .cont .codeCont
+{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  /* border-left: 5px solid rgb(202, 163, 33); */
+  border-radius: 1em;
+  overflow: hidden;
+  transition: all .12s;
+}
+.css .cont .exampleCont
+{
+  max-width: 100%;
+  max-height: 100%;
+}
+.css .cont .exampleCont h3
+{
+  background-color: rgb(228, 228, 228);
+  font: 400 1.0em var(--f1);
+  height: 3em;
+  margin: 0;
+  padding: 0 0.8em;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.css .cont .codeCont h3
+{
+  background-color: rgb(228, 228, 228);
+  font: 400 1.0em var(--f1);
+  height: 3em;
+  margin: 0;
+  padding: 0 0.8em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.css .cont .codeCont h3 button
+{
+  font: 600 0.7em var(--f1);
+  background-color: whitesmoke;
+  height: 60%;
+  border: 2px solid black;
+  border-radius: 3em;
+  padding: 0.5em 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .12s;
+  cursor: pointer;
+}
+.css .cont .codeCont h3 .cssButton
+{
+  border-color: rgb(21, 147, 231);
+}
+.css .cont .codeCont h3 .htmlButton
+{
+  border-color: rgb(231, 63, 21);
+}
+.css .cont .codeCont h3 .active
+{
+  border-width: 4px;
+}
+.css .cont .exampleCont .example
+{
+  font: 400 0.8em var(--f9);
+  width: 100%;
+  height: calc(100% - 3em);
+  transition: all .12s;
+}
+.css .cont .exampleCont .example *
+{
+  transition: all .12s;
+}
+.css .cont .codeCont-css
+{
+  border-left: 5px solid rgb(21, 147, 231);
+}
+.css .cont .codeCont-html
+{
+  border-left: 5px solid rgb(231, 63, 21);
+}
+.css .cont .codeCont .code-css,
+.css .cont .codeCont .code-html
+{
+  color: whitesmoke;
+  background-color: rgb(30, 30, 30);
+  font: 400 0.8em var(--f9);
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.css .cont .codeCont .textareaCont
+{
+  height: calc(100% - 3em);
+  overflow-y: hidden;
+}

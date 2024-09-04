@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            font-family: Arial;
+        }
+        h2
+        {
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+        div
+        {
+            width: 18rem;
+            background-color: rgb(255, 246, 122);
+            padding: 1rem;
+        }
+        table
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Formulář metodou POST</h2>
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <td>Jméno:</td><td><input type="text" name="jmeno"></td>
+                </tr>
+                <tr>
+                    <td>Příjmení:</td><td><input type="text" name="prijmeni"></td>
+                </tr>
+                <tr>
+                    <td>Pohlaví:</td><td>M<input type="radio" name="pohlavi"> Ž<input type="radio" name="pohlavi"></td>
+                </tr>
+                <tr>
+                    <td>Vzdělání:</td><td>
+                        <select name="" id="">
+                            <option value="opt1">Základní</option>
+                            <option value="opt2">Střední</option>
+                            <option value="opt3">Vysokoškolské</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Koníčky:</td>
+                    <td>
+                        <input type="checkbox" name="box1"> Vaření <br>
+                        <input type="checkbox" name="box2"> Sport <br>
+                        <input type="checkbox" name="box3"> Počítač <br>
+                        <input type="checkbox" name="box4"> Jiné <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Foto:</td><td><input type="file" name="file"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit"></td><td><input type="reset" name="reset"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

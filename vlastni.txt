@@ -1,0 +1,57 @@
+<section className="vlastni">
+      <a id="vlastni" className="anchor"></a>
+      <img src="images/windows/windows_wallpaper.png" className="bg" />
+      <div className="main">
+        <div className={"win-ui popup " + winPopupClass}>
+          <h4>
+            <div className='text'>
+              <img src="images/windows/windows_icon.png"/>
+              <span>Windows</span>
+            </div>
+            <button onClick={()=>{setWinPopupVis(false)}}>X</button>
+          </h4>
+          <div className="cont">
+            <div className="text">
+              <div className="img-cont">
+                <img src="images/windows/windows_notif_icon.png" />
+              </div>
+              <p>Vlastní webové projekty</p>
+            </div>
+            <button className='button' onClick={()=>{setWinPopupVis(false)}}>Ok</button>
+          </div>
+        </div>
+        <div className="weby">
+          <div className="cont">
+            {jsonData.projekty.map((item: any) => (
+              <button className="web" onClick={()=>{setWebInfoData(item)}}>
+                <div className="img-cont">
+                  <img src="images/projekty/default_fav.png"/>
+                </div>
+                <h4>{item.name}</h4>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="win-ui web-info web-info-hidden">
+          <h4>
+            <div className='text'>
+              <img src="images/windows/windows_icon.png"/>
+              <span>Windows</span>
+            </div>
+          </h4>
+          <div className="cont">
+            <div className="text">
+              <p>Info o webu</p>
+            </div>
+            <a className='button' href="" target="_blank">Navštívit web</a>
+          </div>
+        </div>
+      </div>
+      <div className="footer">
+        <button className="start">
+          <img src="images/windows/windows_icon.png"/>
+          <span>start</span>
+        </button>
+        <div className="time">{new Date().getHours() + ":" + new Date().getMinutes().toString().padStart(2, '0')}</div>
+      </div>
+    </section>

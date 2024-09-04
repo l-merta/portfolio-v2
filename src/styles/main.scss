@@ -164,6 +164,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.0em;
 
     a,
@@ -378,6 +379,7 @@ main {
 }
 .skola {
   width: 100%;
+  padding-bottom: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -393,35 +395,72 @@ main {
     position: absolute;
     top: 0;
     transform: rotate(-40deg);
+    z-index: -1;
   }
   .cont {
     width: 80%;
-    height: 30em;
+    min-height: 40em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    z-index: 1;
+    gap: 3.0em;
 
     .web {
-      width: 18em;
-      height: 20em;
+      width: 90vw;
+      max-width: 26em;
+      padding: 1.0em;
       display: flex;
       flex-direction: column;
       gap: 0.5em;
       position: relative;
+      text-decoration: none;
 
       .border {
         mix-blend-mode: difference;
-        border: 4px solid white;
-        border-radius: 0.5em;
+        border: 5px solid rgba(255, 255, 255, 0.9);
+        border-radius: 0.4em;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: 0;
+        transition: all .12s;
+      }
+      .img-cont {
+        aspect-ratio: 16/9 !important;
+        width: 100%;
+        border-radius: 0.2em;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      h4 {
+        color: white;
+        mix-blend-mode: difference;
+        font: 600 1.8em var(--f4);
+        margin: 0.4em 0;
       }
     }
+    .web:hover {
+      .border {
+        --scale: -0.3em;
+        top: var(--scale);
+        left: var(--scale);
+        right: var(--scale);
+        bottom: var(--scale);
+      }
+    }
+  }
+  .sticker1 {
+    bottom: 2vw;
+    right: 4vw;
+    transform: rotate(3deg);
+    z-index: 1;
   }
 }
 .velocityScroll-cont {
@@ -439,147 +478,56 @@ main {
 }
 .vlastni {
   width: 100%;
-  height: calc(100dvh - var(--hh));
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 
-  .bg {
+  video {
     width: 100%;
     height: 100%;
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     object-fit: cover;
     z-index: -1;
   }
-  .main {
+  .cont {
     width: 100%;
-    height: 100%;
+    padding-bottom: 2.0em;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    position: relative;
+    z-index: 4;
 
-    .popup {
-      //background-color: var(--v-c1);
-      background: var(--v-c1);
-      background: linear-gradient(90deg, var(--v-c2) 0%, var(--v-c1) 10%, var(--v-c1) 90%, var(--v-c2) 100%);
+    .web-img {
+      aspect-ratio: 16/9;
+      width: 35em;
+      border: 3px solid rgba(0, 0, 0, 0.7);
+      border-radius: 1.5em;
+    }
+    .web-list {
       width: 30em;
-      height: 15em;
-      border-radius: 0.3em;
-      padding: 0.2em;
-      padding-top: 0;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      gap: 0.5em;
 
-      h4 {
-        color: white;
-        font: 700 1.2em "Arial";
-        height: 2.2em;
-        margin: 0 0.2em;
+      .web-item {
+        background-color: white;
+        font: 600 1.2em var(--f6);
+        width: 100%;
+        height: 4em;
+        border: 3px solid rgba(0, 0, 0, 0.7);
+        border-radius: 1.0em;
+        padding: 0 1.0em;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-
-        .text {
-          height: 100%;
-          display: flex;
-          align-items: center;
-          gap: 0.4em;
-
-          img {
-            height: 50%;
-          }
-        }
-        button {
-          color: white;
-          background: rgb(250,70,70);background: linear-gradient(90deg, rgba(250,70,70,1) 0%, rgba(207,27,27,1) 100%);
-          font: 700 1.0em "Arial";
-          aspect-ratio: 1/1;
-          height: 70%;
-          border: 1px solid white;
-          border-radius: 0.3em;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        }
-        button:hover {
-          opacity: 0.97;
-        }
-      }
-      .cont {
-        background-color: whitesmoke;
-        width: 100%;
-        height: 100%;
-        border-radius: 0.1em;
-        padding-top: 1em;
-        display: flex;
-        flex-direction: column;
-
-        .text {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          gap: 0.5em;
-
-          .img-cont {
-            width: 7em;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-  
-            img {
-              width: 80%;
-              object-fit: cover;
-            }
-          }
-          p {
-            color: rgb(31, 31, 31);
-            font: 600 1.3em "Arial";
-            margin: 0.5em 0;
-          }
-        }
-        button {
-          background-color: whitesmoke;
-          font: 200 1.2em "Arial";
-          border: 2px solid gray;
-          border-radius: 0.2em;
-          margin: 1.2em auto;
-          padding: 0.2em 1.8em;
-          cursor: pointer;
-        }
-        button:hover {
-          opacity: 0.97;
-        }
-      }
-    }
-  }
-  .footer {
-    background: var(--v-c1);
-    background: linear-gradient(90deg, var(--v-c2) 0%, var(--v-c1) 10%, var(--v-c1) 90%, var(--v-c2) 100%);
-    width: 100%;
-    height: 3.2em;
-
-    .start {
-      background: rgb(0,168,0);
-      background: linear-gradient(0deg, rgba(0,168,0,1) 50%, rgba(0,119,0,1) 100%);
-      height: 100%;
-      border: none;
-      border-top-right-radius: 1.5em;
-      border-bottom-right-radius: 1.2em;
-      padding: 0 1.6em 0 1.0em;
-      display: flex;
-      align-items: center;
-      gap: 0.6em;
-
-      img {
-        height: 60%;
-      }
-      span {
-        color: white;
-        font: 700 1.7em "Arial";
-        font-style: italic;
+        align-items: center
       }
     }
   }

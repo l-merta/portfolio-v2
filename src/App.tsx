@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import TypingAnimation from "./components/magicui/typing-animation";
 import IconCloud from "./components/magicui/icon-cloud";
@@ -10,13 +10,14 @@ import Header from "./components/Header";
 import Title from "./components/Title";
 import Title_small from "./components/Title_small";
 import SinCanvas from "./components/SinCanvas";
+import Video from "./components/Video";
 
 import jsonData from './../public/scripts/json/data.json'; 
 
 function App() {
   console.log(jsonData);
   const [techClass, setTechClass] = useState("tech-hidden");
-  const [winPopupClass, setWinPopupClass] = useState("");
+  //const [winPopupClass, setWinPopupClass] = useState("");
 
   const slugs = [
     "typescript",
@@ -46,6 +47,7 @@ function App() {
       setTechClass("tech-hidden");
     }
   }
+  /*
   function setWinPopupVis(vis: boolean) {
     if(vis) {
       setWinPopupClass("");
@@ -53,6 +55,28 @@ function App() {
     else {
       setWinPopupClass("disabled");
     }
+  }
+  function setWebInfoData(data: any) {
+    const webInfo: any = document.querySelector(".web-info");
+    webInfo.classList.remove("web-info-hidden");
+    webInfo.querySelector(".cont .text p").innerHTML = data.name;
+    webInfo.querySelector(".cont .button").href = data.link;
+  }
+  */
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      newCcMain();
+    }, 2 * 1000);
+  
+    return () => clearTimeout(timeoutId); // Cleanup on unmount/re-mount
+  }, []);
+  function newCcMain() {
+    console.log("newCcMain");
+    const colorChangerCont: any = document.querySelector("main .colorChangerCont");
+    const newCC: any = document.createElement('div');
+    newCC.classList = "colorChanger colorChangerAnimate";
+    colorChangerCont.appendChild(newCC, colorChangerCont.children[colorChangerCont.children.length]);
   }
 
   return (
@@ -63,10 +87,13 @@ function App() {
       {/* <TypingAnimation text="Software engineer" className="main-h2"/> */}
       <h2 className="main-h2"><WordRotate words={["Frontend", "Backend", "Fullstack"]}></WordRotate> developer</h2>
       <div className="links">
-        <a href="#skola">Školní projekty</a>
-        <a href="#vlastni">Vlastní projekty</a>
+        <a href="#skola" onMouseEnter={()=>{newCcMain()}}>Školní projekty</a>
+        <a href="#vlastni" onMouseEnter={()=>{newCcMain()}}>Vlastní projekty</a>
       </div>
-      <img src="images/stickers/programmer.png" className="sticker sticker1" />
+      <div className="colorChangerCont">
+        <div className="colorChanger"></div>
+      </div>
+      {/* <img src="images/stickers/programmer.png" className="sticker sticker1" /> */}
     </main>
     <section className="tech-pre">
       <a href="#tech" onClick={()=>{setTechVis(true)}}>
@@ -81,13 +108,13 @@ function App() {
         {/* <i className="fa-regular fa-hand-pointer"></i> */}
       </Title>
       <img src="images/stickers/code_editor.png" className="sticker sticker1" />
-      <img src="images/stickers/laptop2.png" className="sticker sticker2" />
+      <img src="images/stickers/laptop.png" className="sticker sticker2" />
     </section>
     <a id="tech" className="anchor"></a>
     <section className={"tech " + (techClass)}>
-      <img src="images/stickers/modules.png" className="sticker sticker1" />
+      <img src="images/stickers/bot.png" className="sticker sticker1" />
       <img src="images/stickers/git_req.png" className="sticker sticker2" />
-      <img src="images/stickers/git_merge.png" className="sticker sticker3" />
+      <img src="images/stickers/api.png" className="sticker sticker3" />
       <div className="dotPatern-parent">
         <div className="vignete"></div>
         <DotPattern className="dotPatern"></DotPattern>
@@ -117,12 +144,19 @@ function App() {
     </section>
     <section className="skola">
       <a id="skola" className="anchor"></a>
-      <SinCanvas />
+      <img src="images/stickers/web.png" className="sticker sticker1" />
       <Title><span>Školní projekty</span></Title>
+      <SinCanvas />
       <div className="cont">
-        <div className="web">
-          <div className="border"></div>
-        </div>
+        {jsonData.skola.map((item: any) => (
+          <a href={"skola/"+item.folder} target='_blank' className="web">
+            <div className="border"></div>
+            <div className="img-cont">
+              <img src={"images/skola/"+item.image} />
+            </div>
+            <h4>{item.name}</h4>
+          </a>
+        ))}
       </div>
     </section>
     <div className="velocityScroll-cont">
@@ -130,32 +164,20 @@ function App() {
     </div>
     <section className="vlastni">
       <a id="vlastni" className="anchor"></a>
-      <img src="images/windows/windows_wallpaper.png" className="bg" />
-      <div className="main">
-        <div className={"popup " + winPopupClass}>
-          <h4>
-            <div className='text'>
-              <img src="images/windows/windows_icon.png"/>
-              <span>Windows</span>
-            </div>
-            <button onClick={()=>{setWinPopupVis(false)}}>X</button>
-          </h4>
-          <div className="cont">
-            <div className="text">
-              <div className="img-cont">
-                <img src="images/windows/windows_notif_icon.png" />
-              </div>
-              <p>Vlastní webové projekty</p>
-            </div>
-            <button onClick={()=>{setWinPopupVis(false)}}>Ok</button>
-          </div>
+      <Video source={"videos/bg_topographic.mp4"}/>
+      <Title><span>Vlastní projekty</span></Title>
+      <div className="cont">
+        <img className="web-img" src="https://unsplash.it/1920/1080" />
+        <div className="web-list">
+          <div className="web-item">web item</div>
+          <div className="web-item">web item</div>
+          <div className="web-item">web item</div>
+          <div className="web-item">web item</div>
+          <div className="web-item">web item</div>
         </div>
       </div>
-      <div className="footer">
-        <button className="start">
-          <img src="images/windows/windows_icon.png"/>
-          <span>start</span>
-        </button>
+      <div className="colorChangerCont">
+        <div className="colorChanger"></div>
       </div>
     </section>
     </>

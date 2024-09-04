@@ -1,0 +1,74 @@
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    color: whitesmoke;
+    background-color: rgb(20, 20, 20);
+    font-family: "Montserrat";
+    height: 200rem;
+    margin: 0;
+    /* margin-top: 5rem; */
+    /* padding: 1rem; */
+    overflow-x: hidden;
+}
+.transitionImg
+{
+    width: 100%;
+    margin-top: -4rem;
+}
+section
+{
+    /* background-color: red; */
+    padding: 0.6rem 3.5rem;
+}
+section h2
+{
+    font-weight: 700;
+    margin-left: -1rem;
+    border: 2px solid transparent;
+    border-bottom: 2px solid whitesmoke;
+}
+section h2 i
+{
+    margin-left: 0.5rem;
+}
+section .flora-imgCont
+{
+    /* background-color: red; */
+    /* width: 100%; */
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+section .flora-imgCont img
+{
+    width: 14rem;
+    height: 18rem;
+    object-fit: cover;
+    border: 2px solid rgb(189, 189, 189);
+    border-radius: 0.5rem;
+}
+section .about-text
+{
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+section .about-text .miniSec
+{
+    width: 100%;
+}
+section .about-text .miniSec2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .about-text .miniSec p
+{
+    font: 600 1.1rem "Montserrat";
+}

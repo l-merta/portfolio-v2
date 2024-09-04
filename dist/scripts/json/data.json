@@ -1,4 +1,113 @@
 {
+  "skola": [
+    {
+      "name": "Krkonoše",
+      "image": "krkonose.jpg",
+      "folder": "krkonose"
+    },
+    {
+      "name": "Šachy",
+      "image": "sachy.jpg",
+      "folder": "sachy"
+    },
+    {
+      "name": "Formulář",
+      "image": "formular.jpg",
+      "folder": "formular"
+    },
+    {
+      "name": "Školní bufet",
+      "image": "formular2.png",
+      "folder": "formular2"
+    },
+    {
+      "name": "CSS",
+      "image": "css.png",
+      "folder": "css"
+    }
+  ],
+  "projekty": [
+    {
+      "name": "TicTacWeb",
+      "popis": "Online piškvorky proti počítači nebo ostatním hráčům v hracím poli s různými velikostmi",
+      "image": "TicTacWeb.png",
+      "link": "https://tictacweb.netlify.app",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    },
+    {
+      "name": "Filmíno",
+      "popis": "Databáze filmů a seriálů",
+      "image": "Filmino.png",
+      "link": "vlastni/filmino",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "SCSS",
+          "icon": "sass.png"          
+        },
+        {
+          "name": "REACT",
+          "icon": "react.png"          
+        }
+      ]
+    },
+    {
+      "name": "ChatApp",
+      "popis": "Chatovací aplikace pomocí real-time databáze",
+      "image": "ChatApp.png",
+      "link": "https://chatappwebsite.netlify.app",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    },
+    {
+      "name": "WeatherApp",
+      "popis": "Aktuální počasí ze všech zemí a měst světa včetně místního času",
+      "image": "WeatherApp.png",
+      "link": "https://mojepocasiapp.netlify.app",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    }
+  ],
   "tech": {
     "languages": [
       {

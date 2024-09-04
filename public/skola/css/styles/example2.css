@@ -1,0 +1,18 @@
+.ukazka2 div
+{
+        width: 100px;
+        height: 100px;
+        padding: 0 20px;
+        margin: 0 20px;
+        border: 10px solid black;
+}
+.ukazka2 .content
+{
+        /* šířka = 100px + všechno ohraničení */
+        box-sizing: content-box;
+}
+.ukazka2 .border
+{
+        /* šířka = vždy 100px */
+        box-sizing: border-box;
+}

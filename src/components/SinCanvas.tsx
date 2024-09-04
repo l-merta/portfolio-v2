@@ -12,7 +12,7 @@ const SinCanvas: React.FC = () => {
     const sin_ctx = sin_canvas.getContext('2d');
 
     const wave = {
-      y: sin_canvas.height + window.innerHeight * 0.9,
+      y: sin_canvas.height + window.innerHeight * 1.05,/// 2,//
       length: 0.005,
       amplitude: 80,
       frequency: 0.015,
@@ -26,8 +26,8 @@ const SinCanvas: React.FC = () => {
       const parentWidth = sin_canvas_parent.clientWidth;
       const parentHeight = sin_canvas_parent.clientHeight;
       if (parentWidth > 0 && parentHeight > 0) {
-        sin_canvas.width = parentWidth * 1.5;
-        sin_canvas.height = parentHeight * 2.8;
+        sin_canvas.width = parentWidth * 1.3; //1.5
+        sin_canvas.height = parentHeight * 2.5; //2.8
       }
     };
 

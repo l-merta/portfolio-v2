@@ -1,0 +1,12 @@
+.ukazka2
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.ukazka2 div
+{
+  background-color: gray;
+}

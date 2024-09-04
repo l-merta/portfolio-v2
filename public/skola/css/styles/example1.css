@@ -1,0 +1,25 @@
+/* kód lze upravovat */
+.ukazka1 div
+{
+        color: white;
+        background-color: gray;
+        width: 100px;
+        height: 50px;
+}
+.ukazka1 .div2
+{
+        color: skyblue;
+        width: 150px;
+}
+.ukazka1 #div3
+{
+        color: yellow;
+}
+.ukazka1 #div3:hover
+{
+        width: 150px;
+}
+.ukazka1 #div3:active
+{
+        width: 200px;
+}

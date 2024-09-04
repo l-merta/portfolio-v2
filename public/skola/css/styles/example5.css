@@ -1,0 +1,14 @@
+.ukazka5
+{
+        --barva-textu: white;
+        --sirka: 200px;
+        --font: "Exo 2";
+}
+.ukazka5 div
+{
+        color: var(--barva-textu);
+        background-color: gray;
+        font-family: var(--font);
+        width: var(--sirka);
+        height: 100px;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root
+        {
+            --size:500px;
+        }
+        table
+        {
+            aspect-ratio: 1/1;
+            height: var(--size);
+            border-spacing: 0;
+        }
+        table tr td
+        {
+            background-color: rgb(243, 243, 243);
+            /* aspect-ratio: 1/1; */
+            width: calc(var(--size) / 10) !important;
+            height: calc(var(--size) / 10) !important;
+        }
+        table tr td:hover
+        {
+            opacity: 0.5;
+        }
+        table tr .td-dark
+        {
+            background-color: rgba(105, 105, 105);
+        }
+        table .numberRow,
+        table tr .numberRow
+        {
+            background-color: rgb(202, 202, 202) !important;
+            pointer-events: none;
+        }
+        img
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- background="woodTxtr.jpg" -->
+    <table>
+        <tr>
+            <td class="numberRow" align="center">a</td>
+            <td><img src="dark/drook.svg.png"></td>
+            <td class="td-dark"><img src="dark/dknight.svg.png"></td>
+            <td><img src="dark/dbishop.svg.png"></td>
+            <td class="td-dark"><img src="dark/dqueen.svg.png"></td>
+            <td><img src="dark/dking.svg.png"></td>
+            <td class="td-dark"><img src="dark/dbishop.svg.png"></td>
+            <td><img src="dark/dknight.svg.png"></td>
+            <td class="td-dark"><img src="dark/drook.svg.png"></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">b</td>
+            <td class="td-dark"><img src="dark/dpawn.svg.png"></td>
+            <td><img src="dark/dpawn.svg.png"></td>
+            <td class="td-dark"><img src="dark/dpawn.svg.png"></td>
+            <td><img src="dark/dpawn.svg.png"></td>
+            <td class="td-dark"><img src="dark/dpawn.svg.png"></td>
+            <td><img src="dark/dpawn.svg.png"></td>
+            <td class="td-dark"><img src="dark/dpawn.svg.png"></td>
+            <td><img src="dark/dpawn.svg.png"></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">c</td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">d</td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">e</td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">f</td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+            <td class="td-dark"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">g</td>
+            <td><img src="light/lpawn.svg.png"></td>
+            <td class="td-dark"><img src="light/lpawn.svg.png"></td>
+            <td><img src="light/lpawn.svg.png"></td>
+            <td class="td-dark"><img src="light/lpawn.svg.png"></td>
+            <td><img src="light/lpawn.svg.png"></td>
+            <td class="td-dark"><img src="light/lpawn.svg.png"></td>
+            <td><img src="light/lpawn.svg.png"></td>
+            <td class="td-dark"><img src="light/lpawn.svg.png"></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center">h</td>
+            <td class="td-dark"><img src="light/lrook.svg.png"></td>
+            <td><img src="light/lknight.svg.png"></td>
+            <td class="td-dark"><img src="light/lbishop.svg.png"></td>
+            <td><img src="light/lqueen.svg.png"></td>
+            <td class="td-dark"><img src="light/lking.svg.png"></td>
+            <td><img src="light/lbishop.svg.png"></td>
+            <td class="td-dark"><img src="light/lknight.svg.png"></td>
+            <td><img src="light/lrook.svg.png"></td>
+        </tr>
+        <tr>
+            <td class="numberRow" align="center"></td>
+            <td class="numberRow" align="center">1</td>
+            <td class="numberRow" align="center">2</td>
+            <td class="numberRow" align="center">3</td>
+            <td class="numberRow" align="center">4</td>
+            <td class="numberRow" align="center">5</td>
+            <td class="numberRow" align="center">6</td>
+            <td class="numberRow" align="center">7</td>
+            <td class="numberRow" align="center">8</td>
+        </tr>
+    </table>
+</body>
+</html>
