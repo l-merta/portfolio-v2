@@ -28,49 +28,30 @@
   ],
   "projekty": [
     {
-      "name": "TicTacWeb",
-      "popis": "Online piškvorky proti počítači nebo ostatním hráčům v hracím poli s různými velikostmi",
-      "image": "TicTacWeb.png",
-      "link": "https://tictacweb.netlify.app",
-      "download": "file.rar",
-      "tech": [
-        {
-          "name": "HTML",
-          "icon": "html.png"          
-        },
-        {
-          "name": "CSS",
-          "icon": "css.png"          
-        },
-        {
-          "name": "JS",
-          "icon": "js.png"          
-        }
-      ]
-    },
-    {
       "name": "Filmíno",
       "popis": "Databáze filmů a seriálů",
       "image": "Filmino.png",
       "link": "vlastni/filmino",
       "download": "file.rar",
+      "date": "srpen 2024",
       "tech": [
-        {
-          "name": "SCSS",
-          "icon": "sass.png"          
-        },
         {
           "name": "REACT",
           "icon": "react.png"          
+        },
+        {
+          "name": "SCSS",
+          "icon": "sass.png"          
         }
       ]
     },
     {
-      "name": "ChatApp",
-      "popis": "Chatovací aplikace pomocí real-time databáze",
-      "image": "ChatApp.png",
-      "link": "https://chatappwebsite.netlify.app",
+      "name": "TicTacWeb",
+      "popis": "Online piškvorky proti počítači nebo ostatním hráčům v hracím poli s různými velikostmi",
+      "image": "TicTacWeb.png",
+      "link": "https://tictacweb.netlify.app",
       "download": "file.rar",
+      "date": "listopad 2023",
       "tech": [
         {
           "name": "HTML",
@@ -92,6 +73,29 @@
       "image": "WeatherApp.png",
       "link": "https://mojepocasiapp.netlify.app",
       "download": "file.rar",
+      "date": "srpen 2023",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    },
+    {
+      "name": "ChatApp",
+      "popis": "Chatovací aplikace pomocí real-time databáze",
+      "image": "ChatApp.png",
+      "link": "https://chatappwebsite.netlify.app",
+      "download": "file.rar",
+      "date": "červen 2023",
       "tech": [
         {
           "name": "HTML",

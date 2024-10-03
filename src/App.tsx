@@ -7,10 +7,11 @@ import ScrollVelocity from "./components/magicui/scroll-based-velocity";
 import WordRotate from "./components/magicui/word-rotate";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Title from "./components/Title";
 import Title_small from "./components/Title_small";
 import SinCanvas from "./components/SinCanvas";
-import Video from "./components/Video";
+//import Video from "./components/Video";
 
 import jsonData from './../public/scripts/json/data.json'; 
 
@@ -164,22 +165,31 @@ function App() {
     </div>
     <section className="vlastni">
       <a id="vlastni" className="anchor"></a>
-      <Video source={"videos/bg_topographic.mp4"}/>
       <Title><span>Vlastní projekty</span></Title>
-      <div className="cont">
-        <img className="web-img" src="https://unsplash.it/1920/1080" />
-        <div className="web-list">
-          <div className="web-item">web item</div>
-          <div className="web-item">web item</div>
-          <div className="web-item">web item</div>
-          <div className="web-item">web item</div>
-          <div className="web-item">web item</div>
-        </div>
+      <div className="dotPatern-parent">
+        <div className="vignete"></div>
+        <DotPattern className="dotPatern"></DotPattern>
       </div>
-      <div className="colorChangerCont">
-        <div className="colorChanger"></div>
+      <div className="cont">
+        {jsonData.projekty.map((item: any) => (
+          <a href={item.link} target='_blank' className="web">
+            <div className="border"></div>
+            <div className="img-cont">
+              <img src={"images/projekty/"+item.image} />
+            </div>
+            <h4>{item.name} <span className="date">{item.date}</span></h4>
+            <div className="tech-list">
+              {(item.tech.map((t: any) => (
+                <div className="tech-cont">
+                  <img src={"images/tech/" + t.icon} />
+                </div>
+              )))}
+            </div>
+          </a>
+        ))}
       </div>
     </section>
+    <Footer></Footer>
     </>
   )
 }

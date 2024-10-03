@@ -29,6 +29,7 @@
   --v-c1: rgb(70, 133, 250);
   --v-c2: rgb(27,88,203);
   --hh: 5em;
+  --fh: 4em;
 }
 
 html {
@@ -38,7 +39,6 @@ html {
 body {
   background-color: white;
   margin: 0;
-  margin-bottom: 500px;
 }
 
 body * {

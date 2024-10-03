@@ -31,6 +31,7 @@
   --v-c2: rgb(27,88,203);
   
   --hh: 5em;
+  --fh: 4em;
 }
 html {
   scroll-behavior: smooth;
@@ -38,7 +39,7 @@ html {
 body {
   background-color: white;
   margin: 0;
-  margin-bottom: 500px;
+  //margin-bottom: 500px;
 }
 body * {
   box-sizing: border-box;

@@ -26,8 +26,8 @@ const SinCanvas: React.FC = () => {
       const parentWidth = sin_canvas_parent.clientWidth;
       const parentHeight = sin_canvas_parent.clientHeight;
       if (parentWidth > 0 && parentHeight > 0) {
-        sin_canvas.width = parentWidth * 1.3; //1.5
-        sin_canvas.height = parentHeight * 2.5; //2.8
+        sin_canvas.width = parentWidth * 1.5; //1.5
+        sin_canvas.height = parentHeight * 2.8; //2.8
       }
     };
 
