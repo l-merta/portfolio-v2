@@ -90,12 +90,12 @@
       ]
     },
     {
-      "name": "ChatApp",
-      "popis": "Chatovací aplikace pomocí real-time databáze",
-      "image": "ChatApp.png",
-      "link": "https://chatappwebsite.netlify.app",
+      "name": "Bakaláři kalkulačka kapesného",
+      "popis": "Web app na výpočet kapesného podle známek pomocí Bakaláři API",
+      "image": "Bakalari-kapesne.png",
+      "link": "vlastni/bakalari-kapesno",
       "download": "file.rar",
-      "date": "červen 2023",
+      "date": "květen 2024",
       "tech": [
         {
           "name": "HTML",
