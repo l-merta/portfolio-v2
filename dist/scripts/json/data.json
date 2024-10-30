@@ -11,19 +11,14 @@
       "folder": "sachy"
     },
     {
-      "name": "Formulář",
-      "image": "formular.jpg",
-      "folder": "formular"
-    },
-    {
-      "name": "Školní bufet",
-      "image": "formular2.png",
-      "folder": "formular2"
-    },
-    {
       "name": "CSS",
       "image": "css.png",
       "folder": "css"
+    },
+    {
+      "name": "Design Layout",
+      "image": "design.png",
+      "folder": "design"
     }
   ],
   "projekty": [
@@ -93,7 +88,7 @@
       "name": "Bakaláři kalkulačka kapesného",
       "popis": "Web app na výpočet kapesného podle známek pomocí Bakaláři API",
       "image": "Bakalari-kapesne.png",
-      "link": "vlastni/bakalari-kapesno",
+      "link": "vlastni/bakalari-kapesne",
       "download": "file.rar",
       "date": "květen 2024",
       "tech": [
