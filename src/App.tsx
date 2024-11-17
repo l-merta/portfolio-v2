@@ -48,22 +48,6 @@ function App() {
       setTechClass("tech-hidden");
     }
   }
-  /*
-  function setWinPopupVis(vis: boolean) {
-    if(vis) {
-      setWinPopupClass("");
-    }
-    else {
-      setWinPopupClass("disabled");
-    }
-  }
-  function setWebInfoData(data: any) {
-    const webInfo: any = document.querySelector(".web-info");
-    webInfo.classList.remove("web-info-hidden");
-    webInfo.querySelector(".cont .text p").innerHTML = data.name;
-    webInfo.querySelector(".cont .button").href = data.link;
-  }
-  */
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -150,7 +134,7 @@ function App() {
       <SinCanvas />
       <div className="cont">
         {jsonData.skola.map((item: any) => (
-          <a href={"skola/"+item.folder} target='_blank' className="web">
+          <a href={item.link} target='_blank' className="web">
             <div className="border"></div>
             <div className="img-cont">
               <img src={"images/skola/"+item.image} />
