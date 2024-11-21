@@ -3,22 +3,22 @@
     {
       "name": "Krkonoše",
       "image": "krkonose.jpg",
-      "folder": "krkonose"
-    },
-    {
-      "name": "Šachy",
-      "image": "sachy.jpg",
-      "folder": "sachy"
+      "link": "skola/krkonose"
     },
     {
       "name": "CSS",
       "image": "css.png",
-      "folder": "css"
+      "link": "skola/css"
     },
     {
       "name": "Design Layout",
       "image": "design.png",
-      "folder": "design"
+      "link": "skola/design"
+    },
+    {
+      "name": "Slepičí Kahoot",
+      "image": "kahoot.png",
+      "link": "https://app-ki9la.ondigitalocean.app/"
     }
   ],
   "projekty": [
