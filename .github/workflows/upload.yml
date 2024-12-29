@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: # Add this line to enable manual triggering
 
 jobs:
   deploy:
@@ -31,6 +32,11 @@ jobs:
       run: |
         mkdir -p ~/.ssh
 
+    - name: Install sshpass
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y sshpass
+
     - name: Configure SSH
       run: |
         echo "Host mertalukas
@@ -43,4 +49,4 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SSH_PASSWORD }}
       run: |
-        sshpass -e ssh root@mertalukas "cd /var/www/html/public/main && git pull && ./deploy.sh"
+        sshpass -e ssh -o StrictHostKeyChecking=no root@mertalukas "cd /var/www/html/public/main && git pull && ./deploy.sh"
