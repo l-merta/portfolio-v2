@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Add this line to enable manual triggering
 
 jobs:
   deploy:
@@ -39,15 +38,6 @@ jobs:
           User root
           ProxyCommand cloudflared access ssh --hostname %h --service-token-id ${{ secrets.CLOUDFLARE_SERVICE_TOKEN_ID }} --service-token-secret ${{ secrets.CLOUDFLARE_SERVICE_TOKEN_SECRET }}
         " >> ~/.ssh/config
-
-    - name: Add SSH key
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-    - name: Add host to known_hosts
-      run: |
-        ssh-keyscan ssh.mertalukas.cz >> ~/.ssh/known_hosts
 
     - name: Deploy
       env:
