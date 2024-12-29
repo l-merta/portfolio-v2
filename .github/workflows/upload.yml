@@ -37,6 +37,11 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+    - name: Debug SSH connection
+      run: |
+        ssh-keyscan ssh.mertalukas.cz
+        ping -c 4 ssh.mertalukas.cz
+
     - name: Add host to known_hosts
       run: |
         ssh-keyscan ssh.mertalukas.cz >> ~/.ssh/known_hosts
