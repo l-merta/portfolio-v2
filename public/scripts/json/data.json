@@ -88,7 +88,7 @@
       "name": "Bakaláři kalkulačka kapesného",
       "popis": "Web app na výpočet kapesného podle známek pomocí Bakaláři API",
       "image": "Bakalari-kapesne.png",
-      "link": "vlastni/bakalari-kapesne",
+      "link": "https://bakaweb.mertalukas.cz",
       "download": "file.rar",
       "date": "květen 2024",
       "tech": [
