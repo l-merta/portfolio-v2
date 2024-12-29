@@ -49,4 +49,4 @@ jobs:
       env:
         SSHPASS: ${{ secrets.SSH_PASSWORD }}
       run: |
-        sshpass -e scp -o StrictHostKeyChecking=no -r build/* root@mertalukas:/var/www/html/public/main/
+        sshpass -e scp -o StrictHostKeyChecking=no -r dist/* root@mertalukas:/var/www/html/public/main/
