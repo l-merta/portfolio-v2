@@ -50,4 +50,7 @@ jobs:
         ssh-keyscan ssh.mertalukas.cz >> ~/.ssh/known_hosts
 
     - name: Deploy
-      run: ssh root@mertalukas "cd /var/www/html/public/main && git pull && ./deploy.sh"
+      env:
+        SSHPASS: ${{ secrets.SSH_PASSWORD }}
+      run: |
+        sshpass -e ssh root@mertalukas "cd /var/www/html/public/main && git pull && ./deploy.sh"
